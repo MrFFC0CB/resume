@@ -171,13 +171,12 @@ aside {
 		padding-bottom: 1rem;
 		margin-bottom: 1rem;
 	}
-	.contact-data a:not([href*='mailto']) {
-		display: none;
-	}
 	aside {
 		padding-top: 0;
-		margin-top: 0;
 		border: none;
+	}
+	section {
+		break-inside: avoid;
 	}
 }
 @page {
