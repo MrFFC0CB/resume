@@ -19,14 +19,15 @@ body {
 
 #resume {
 	width: 100%;
-	max-width: 1280px;
-	padding: 1.5rem 1rem;
+	max-width: 1420px;
+	padding: 3rem 2rem;
 	margin-inline: auto;
 	display: grid;
 	grid-template-columns: 20% 1fr;
 	grid-template-areas:
 		"header header"
-		"aside main";
+		"aside main"
+		"footer footer";
 }
 @media (max-width: 840px) {
 	#resume {
@@ -34,7 +35,8 @@ body {
 		grid-template-areas:
 			"header header"
 			"main main"
-			"aside aside";
+			"aside aside"
+			"footer footer";
 	}
 }
 
@@ -160,6 +162,17 @@ aside {
 	}
 }
 
+footer {
+	grid-area: footer;
+	padding-top: 2.5rem;
+	margin-top: 2.5rem;
+	border-top: 1px solid var(--border-color);
+}
+footer p {
+	margin: 0;
+	text-align: center;
+}
+
 
 
 @media print {
@@ -171,12 +184,15 @@ aside {
 		padding-bottom: 1rem;
 		margin-bottom: 1rem;
 	}
+	section {
+		break-inside: avoid;
+	}
 	aside {
 		padding-top: 0;
 		border: none;
 	}
-	section {
-		break-inside: avoid;
+	footer {
+		display: none;
 	}
 }
 @page {
