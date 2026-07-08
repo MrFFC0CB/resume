@@ -30,6 +30,7 @@ body {
 }
 @media (max-width: 840px) {
 	#resume {
+		grid-template-columns: 100%;
 		grid-template-areas:
 			"header header"
 			"main main"
@@ -48,7 +49,7 @@ h1 {
 h2 {
 	margin-top: 0;
 	text-decoration: underline;
-	text-decoration-color: #868686;
+	text-decoration-color: #707070;
 	text-underline-offset: 2.5px;
 }
 h3 {
@@ -109,8 +110,10 @@ header {
 		text-align: center;
 	}
 	.contact-data {
+		flex-wrap: wrap;
 		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -155,4 +158,29 @@ aside {
 		border-top: 1px solid var(--border-color);
 		border-right: none;
 	}
+}
+
+
+
+@media print {
+	body {
+		color: #000;
+		background-color: #fff;
+	}
+	header {
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
+	.contact-data a:not([href*='mailto']) {
+		display: none;
+	}
+	aside {
+		padding-top: 0;
+		margin-top: 0;
+		border: none;
+	}
+}
+@page {
+	size: A4;
+	margin: 8mm 6mm;
 }
