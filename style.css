@@ -172,6 +172,11 @@ footer p {
 	margin: 0;
 	text-align: center;
 }
+@media screen {
+	footer .view-online-version {
+		display: none;
+	}
+}
 
 
 
@@ -191,7 +196,7 @@ footer p {
 		padding-top: 0;
 		border: none;
 	}
-	footer {
+	footer .view-pdf-version {
 		display: none;
 	}
 }
